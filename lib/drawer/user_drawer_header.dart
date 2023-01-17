@@ -12,8 +12,11 @@ class UserHeader extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(colors: [
           Colors.red,
-          Color.fromARGB(255, 255, 17, 0),
+          Color.fromARGB(255, 242, 103, 93),
         ]),
+        borderRadius: BorderRadiusDirectional.only(
+          bottomEnd: Radius.circular(35.0),
+        ),
       ),
       child: SizedBox(
         width: double.infinity,
@@ -25,7 +28,7 @@ class UserHeader extends StatelessWidget {
                   //Name
                   name,
                   style: const TextStyle(
-                    fontSize: 24,
+                    fontSize: 28,
                     color: Colors.white,
                   ),
                 ),
@@ -37,8 +40,8 @@ class UserHeader extends StatelessWidget {
                   //Group
                   group,
                   style: const TextStyle(
-                    fontSize: 12,
-                    color: Color.fromARGB(255, 198, 198, 198),
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 227, 227, 227),
                   ),
                 ),
                 const Spacer(),

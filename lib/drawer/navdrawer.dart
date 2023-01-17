@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './user_drawer_header.dart';
+import './navlist.dart';
 
 class NavDrawer extends StatelessWidget {
   final String name;
@@ -9,9 +10,9 @@ class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       children: [
         UserHeader(name, group),
+        const NavList(),
       ],
     );
   }
