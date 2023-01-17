@@ -1,33 +1,26 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './drawer/navdrawer.dart';
 
-void main() => runApp(MainApp());
+void main() => runApp(const MainApp());
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                CupertinoIcons.airplane,
-                color: CupertinoColors.white,
-              ),
-              label: "Airplane",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                CupertinoIcons.alarm,
-                color: CupertinoColors.white,
-              ),
-              label: "Alarm",
-            ),
-          ],
-          backgroundColor: Color.fromARGB(255, 90, 114, 255),
+        appBar: AppBar(
+          title: const Text("Demo App"),
+          backgroundColor: Colors.red,
+        ),
+        drawer: const Drawer(
+          child: NavDrawer("Aaditya", "1CO1"),
         ),
       ),
     );
