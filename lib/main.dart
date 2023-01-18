@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
-import './drawer/navdrawer.dart';
-
-void main() => runApp(const MainApp());
-
-class MainApp extends StatefulWidget {
-  const MainApp({super.key});
-
-  @override
-  State<MainApp> createState() => _MainAppState();
+import './loginroute.dart';
+import './homeroute.dart';
+void main() {
+  runApp(const AppRoot());
 }
 
-class _MainAppState extends State<MainApp> {
+class AppRoot extends StatelessWidget {
+  const AppRoot({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Demo App"),
-          backgroundColor: Colors.red,
-        ),
-        drawer: const Drawer(
-          child: NavDrawer("Aaditya", "1CO1"),
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginRoute(),
+        '/home': (context) => const HomeRoute(), 
+      },
     );
   }
 }
