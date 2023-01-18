@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'navitem.dart';
 
 class NavList extends StatefulWidget {
   const NavList({super.key});
@@ -64,15 +65,19 @@ class _NavListState extends State<NavList> {
       child: ListView.builder(
         itemCount: categories.length,
         itemBuilder: (context, i) {
-          return ExpansionTile(
-            title: Text(categories[i]['heading'] as String),
-            children: (categories[i]['sub'] as List<String>)
-                .map(
-                  (e) => ListTile(
-                    title: Text(e),
-                  ),
-                )
-                .toList(),
+          // return ExpansionTile(
+          //   title: Text(categories[i]['heading'] as String),
+          //   children: (categories[i]['sub'] as List<String>)
+          //       .map(
+          //         (e) => ListTile(
+          //           title: Text(e),
+          //         ),
+          //       )
+          //       .toList(),
+          // );
+          return NavItem(
+            categories[i]['heading'] as String,
+            categories[i]['sub'] as List<String>,
           );
         },
       ),
