@@ -8,17 +8,17 @@ class NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-            title: Text(heading),
-            children: (categories)
-                .map(
-                  (e) => ListTile(
-                    title: Text('  ' + e),
-                    onTap:() {
-                      //todo
-                    },
-                  ),
-                )
-                .toList(),
-          );
+      title: Text(heading),
+      children: (categories)
+          .map(
+            (e) => ListTile(
+              title: Text('  ' + e),
+              onTap: () {
+                //todo
+              },
+            ),
+          )
+          .toList(),
+    );
   }
 }

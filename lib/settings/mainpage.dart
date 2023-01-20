@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../brandbar.dart';
+import './settingslistitem.dart';
 
 class SettingsRoute extends StatelessWidget {
   const SettingsRoute({super.key});
@@ -7,7 +8,18 @@ class SettingsRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: brandBar(const Text("Settings")),
+      appBar: brandBar(
+        const Text("Settings"),
+      ),
+      body: ListView(
+        children: [
+          SettingsListItem(
+            "Theme",
+            Icons.format_paint,
+            () {},
+          ),
+        ],
+      ),
     );
   }
 }
