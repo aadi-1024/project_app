@@ -1,19 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:project_app/brandbar.dart';
 
 class LoginRoute extends StatelessWidget {
+  const LoginRoute({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: brandBar(
+        const Text("Login"),
+      ),
       body: Column(
         children: [
           const Spacer(),
           Card(
+            margin: const EdgeInsets.symmetric(horizontal: 30),
             elevation: 20,
             shadowColor: const Color.fromARGB(255, 0, 0, 0),
             child: Container(
-              padding: const EdgeInsets.all(30.0),
+              padding: const EdgeInsets.symmetric(
+                vertical: 30.0,
+                horizontal: 15,
+              ),
               child: Column(
                 children: [
+                  Image.asset(
+                    './img/logo.png',
+                    width: 200,
+                    height: 200,
+                  ),
                   Container(
                     margin: const EdgeInsets.only(bottom: 8),
                     child: const TextField(
@@ -52,7 +67,6 @@ class LoginRoute extends StatelessWidget {
                           horizontal: 30,
                         ),
                         backgroundColor: Colors.redAccent,
-                        
                       ),
                       child: const Text(
                         "Login",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './drawer/navdrawer.dart';
+import './brandbar.dart';
 
 class HomeRoute extends StatelessWidget {
   const HomeRoute({super.key});
@@ -7,8 +8,8 @@ class HomeRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
+      appBar: brandBar(
+        const Text("Home"),
       ),
       drawer: const Drawer(
         child: NavDrawer(
