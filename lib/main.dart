@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './loginroute.dart';
 import './homeroute.dart';
+import './settings/mainpage.dart';
+
 void main() {
   runApp(const AppRoot());
 }
@@ -13,8 +15,9 @@ class AppRoot extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginRoute(),
+        '/': (context) => const LoginRoute(),
         '/home': (context) => const HomeRoute(), 
+        '/settings': (context) => const SettingsRoute(),
       },
     );
   }

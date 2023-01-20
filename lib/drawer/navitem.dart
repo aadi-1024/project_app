@@ -12,7 +12,7 @@ class NavItem extends StatelessWidget {
             children: (categories)
                 .map(
                   (e) => ListTile(
-                    title: Text(e),
+                    title: Text('  ' + e),
                     onTap:() {
                       //todo
                     },

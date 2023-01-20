@@ -60,8 +60,7 @@ class _NavListState extends State<NavList> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 400.0,
+    return Expanded(
       child: ListView.builder(
         itemCount: categories.length,
         itemBuilder: (context, i) {

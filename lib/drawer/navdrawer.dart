@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './user_drawer_header.dart';
 import './navlist.dart';
+import 'navbottombar.dart';
 
 class NavDrawer extends StatelessWidget {
   final String name;
@@ -13,6 +14,8 @@ class NavDrawer extends StatelessWidget {
       children: [
         UserHeader(name, group),
         const NavList(),
+        // const Spacer(),
+        const NavBottomBar(),
       ],
     );
   }
