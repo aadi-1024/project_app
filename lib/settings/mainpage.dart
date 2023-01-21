@@ -16,7 +16,12 @@ class SettingsRoute extends StatelessWidget {
           SettingsListItem(
             "Theme",
             Icons.format_paint,
-            () {},
+            () {
+              Navigator.pushNamed(
+                context,
+                "/settings/theme",
+              );
+            },
           ),
         ],
       ),
