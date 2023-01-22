@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 AppBar brandBar(Widget title) {
   return AppBar(
-      backgroundColor: Colors.red,
+      // backgroundColor: Colors.red,
       title: title,
   );
 }

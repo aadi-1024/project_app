@@ -9,12 +9,12 @@ class UserHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DrawerHeader(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
-          Colors.red,
-          Color.fromARGB(255, 242, 103, 93),
+          Theme.of(context).colorScheme.primary,
+          Theme.of(context).colorScheme.secondary,
         ]),
-        borderRadius: BorderRadiusDirectional.only(
+        borderRadius: const BorderRadiusDirectional.only(
           bottomEnd: Radius.circular(35.0),
         ),
       ),
