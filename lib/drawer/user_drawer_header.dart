@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class UserHeader extends StatelessWidget {
   final String name;
   final String group;
-
-  const UserHeader(this.name, this.group, {super.key});
+  final String roll;
+  const UserHeader(this.name, this.group, this.roll, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,20 @@ class UserHeader extends StatelessWidget {
                 ),
                 const Spacer(),
               ],
-            )
+            ),
+            Row(
+              children: [
+                Text(
+                  //Group
+                  roll,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 227, 227, 227),
+                  ),
+                ),
+                const Spacer(),
+              ],
+            ),
           ],
         ),
       ),

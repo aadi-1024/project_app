@@ -6,13 +6,14 @@ import 'navbottombar.dart';
 class NavDrawer extends StatelessWidget {
   final String name;
   final String group;
-  const NavDrawer(this.name, this.group, {super.key});
+  final String roll;
+  const NavDrawer(this.name, this.group, this.roll, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        UserHeader(name, group),
+        UserHeader(name, group, roll),
         const NavList(),
         // const Spacer(),
         const NavBottomBar(),

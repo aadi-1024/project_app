@@ -14,7 +14,8 @@ class HomeRoute extends StatelessWidget {
       drawer: const Drawer(
         child: NavDrawer(
           "Aaditya",
-          "1CO1",
+          "1CS1",
+          "102217014",
         ),
       ),
     );
