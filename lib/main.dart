@@ -3,6 +3,7 @@ import './loginroute.dart';
 import './homeroute.dart';
 import './settings/mainpage.dart';
 import './settings/theme.dart';
+import './cgparoute.dart';
 
 void main() {
   runApp(const AppRoot());
@@ -20,6 +21,7 @@ class AppRoot extends StatelessWidget {
         '/home': (context) => const HomeRoute(),
         '/settings': (context) => const SettingsRoute(),
         '/settings/theme': (context) => const ThemePage(),
+        '/cgpa': (context) => const CGPARoute(),
       },
       theme: ThemeData(
         colorScheme: const ColorScheme(

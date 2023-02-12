@@ -9,16 +9,23 @@ class NavItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpansionTile(
       title: Text(heading),
-      children: (categories)
-          .map(
-            (e) => ListTile(
-              title: Text('  ' + e),
-              onTap: () {
-                //todo
-              },
-            ),
-          )
-          .toList(),
+      children: (categories).map((e) {
+        if (e == "View SGPA/CGPA") {
+          return ListTile(
+            title: Text('  ' + e),
+            onTap: () {
+              Navigator.pushNamed(context, '/cgpa');
+            },
+          );
+        } else {
+          return ListTile(
+            title: Text('  ' + e),
+            onTap: () {
+              //todo
+            },
+          );
+        }
+      }).toList(),
     );
   }
 }
